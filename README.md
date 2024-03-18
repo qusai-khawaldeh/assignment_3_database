@@ -46,6 +46,3 @@ updateStudentEmail(1, 'new.email@example.com')
 
 ### Delete a student
 deleteStudent(1)
-Notes
-Ensure that your PostgreSQL user has the necessary permissions to create tables and insert, update, and delete records.
-Handle database credentials securely, and avoid hard-coding them into your scripts.
