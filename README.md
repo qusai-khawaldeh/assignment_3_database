@@ -1,13 +1,15 @@
 # Student_database_management
 # COMP 3005
 
-
 This Python script utilizes SQLAlchemy to interact with a PostgreSQL database, allowing for the creation of a student table and enabling basic CRUD (Create, Read, Update, Delete) operations..
 
-Additionally, ensure that PostgreSQL is installed and running on your system.
-1. Install pgadmin4 
-2. setup postgres server, note down the port and password you will need it when setting up the connection
-
+### Prerequisites
+Before running this script, make sure that PostgreSQL is installed and running on your system. Follow these steps:
+1. Install PgAdmin 4.
+2. pip install sqlalchemy
+3. Set up the PostgreSQL server, noting down the port and password as you will need these details to set up the database connection in the script.
+4. Ensure PgAdmin is running before you excute the script.
+   
 ## Configuration
 In the script, replace the following line with your actual database password:
 password = '1234'  # replace with your database password
@@ -33,16 +35,36 @@ Deletes the record of the student with the specified student_id.
 
 # Example Usage
 
-After setting up your database connection, you can run the functions directly from your Python environment:
+After setting up your database connection, you can run the functions directly from your terminal by 
 
-### Add a new student
-addStudent('Ali', 'khan', 'ali.khan@example.com', '2024-03-14')
+python app.py 
 
+## Application Interaction
+
+Once the application is running, you will be presented with a menu of options for managing the student database:
+
+```plaintext
+1. View all students
+2. Add a new student
+3. Update a student's email
+4. Delete a student
+5. Exit 
+```
 ### Get all students
+option 1: View All students will execute the following function:
 getAllStudents()
 
+### Add a new student
+option 2: Will allow you to add student into the students table
+addStudent('Ali', 'khan', 'ali.khan@example.com', '2024-03-14')
+
 ### Update a student's email
+option 3: Will allow you to update a students email
 updateStudentEmail(1, 'new.email@example.com')
 
 ### Delete a student
+option 4: Will allow you to delete a student record
 deleteStudent(1)
+
+### End script
+option 5: will end the script.
